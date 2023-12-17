@@ -1,7 +1,17 @@
 # Python, Jupyter notebook and Pandas Example
-To demonstrate example for Ppython (py), Pandas (pd), in Jupyter notebook (nb)
+To demonstrate example for Python (py), Pandas (pd), in Jupyter notebook (nb)
 
 Video link:
+
+### Save this code using github
+
+- Make a free account:
+- Install git
+  - $ sudo apt install git
+- cd to your projects folder:
+  - For example:
+    - $ cd ~/Projects
+- $ git clone git@github.com:tallmtt/py-nb-pd-example.git
 
 ## Install/Learn Procedure:
 
@@ -19,13 +29,15 @@ Video link:
         - $ source ./name-of-new-venv/bin/activate
       - To deactivate the environment (when you are done):
         - $ deactivate
-3. Install python libraries for this project (Jupyter notebook and Pandas, maybe Numpy in future)
+3. Install python libraries for this project (Jupyter notebook and Pandas (also matplotlib for plotting))
    - pip install notebook
    - pip install pandas
+   - pip install matplotlib
 4. Start up Jupyter notebook with the activated virtual environment in the Project folder
    - $ cd /home/user/Projects/py-nb-pd
-   - $ jupyter-notebook 
+   - $ jupyter-notebook
 5. Open a browser to continue working
+6. To stop - hit Ctl+C in the console
 
 ### In Browser:
 1. Open a New Notebook (on right side)
@@ -36,9 +48,6 @@ Video link:
        - Pressing Ctl+Enter will run the code but not advance
        - Pressing Alt+Enter will run the code and make a new box underneath
      - I am commenting everything to hopefully be self explanatory
-
-## Data:
-- ['income' data](https://raw.githubusercontent.com/deepanshu88/Datasets/master/UploadedFiles/income.csv): This data contains the income of various states from 2002 to 2015. The dataset contains 51 observations and 16 variables. 
 
 ## Notes:
 
@@ -52,7 +61,18 @@ Ways to import files:
   - df = pd.read_excel('diabetes_multi.xlsx', sheet_name=1)
 - Importing JSON file
   - df = pd.read_json("diabetes.json")
-  
+
+Outputting a DataFrame:
+- Into a CSV file
+  - df.to_csv("diabetes_out.csv", index=False)
+- into a JSON file
+  - df.to_json("diabetes_out.json")
+- into a text file
+  - df.to_csv('diabetes_out.txt', header=df.columns, index=None, sep=' ')
+- into an Excel file
+  - df.to_excel("diabetes_out.xlsx", index=False)
+
+
 | Utility                             | Functions                 |
 |-------------------------------------|---------------------------|
 | Extract Column Names                | df.columns                |
@@ -77,7 +97,23 @@ Ways to import files:
 | Selecting numeric variables         | df.select_dtypes( )       |
 | Concatenating two dataframes        | pd.concat()               |
 | Merging on basis of common variable | pd.merge( )               |
+| Get the mean of each column value   | df.mean()                 |
+| Get the mode of each column value   | df.mode()                 |
+| Get the median of each column value | df.median()               |
+| Create Pivot Tables                 | pd.pivot_table()          |
 
 ## References:
 - [Jupyter Notebook](https://jupyter.org/)
 - [Pandas](https://pandas.pydata.org/docs/getting_started/index.html)
+
+### Learn More (also where some of this is from)
+- [pytoLearn Plots](http://pytolearn.csd.auth.gr/b4-pandas/40/plotserdf.html)
+- [Spark by Example](https://sparkbyexamples.com/pandas/how-to-plot-columns-of-pandas-dataframe/)
+- [10 Min to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+- [w3 schools Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp)
+- [Python Examples Pandas Tutorial and Examples](https://pythonexamples.org/pandas-examples/)
+- [Datacamp Pandas](https://www.datacamp.com/tutorial/pandas)
+- [Listen Data Pandas](https://www.listendata.com/2017/12/python-pandas-tutorial.html)
+
+### Data Used Here:
+- ['income' data](https://raw.githubusercontent.com/deepanshu88/Datasets/master/UploadedFiles/income.csv): This data contains the income of various states from 2002 to 2015. The dataset contains 51 observations and 16 variables.
