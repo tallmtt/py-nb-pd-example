@@ -25,8 +25,15 @@ In command prompt
 4. Start up Jupyter notebook with the activated virtual environment in the Project folder
    - $ cd /home/user/Projects/py-nb-pd
    - $ jupyter-notebook 
-- 
+5. Open a browser to continue working
 
+In Browser:
+1. Open a New Notebook (on right side)
+2. Rename the file by clicking on the name (Untitled)
+3. Start coding
+   - For this example - you can open up and walk through my example notebook
+     - In each box, hitting Ctl+Enter will run the code but not advance
+     - I am commenting everything to hopefully be self explanatory
 
 References:
 - [Jupyter Notebook](https://jupyter.org/)
