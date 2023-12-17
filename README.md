@@ -32,7 +32,9 @@ Video link:
 2. Rename the file by clicking on the name (Untitled)
 3. Start coding
    - For this example - you can open up and walk through my example notebook
-     - In each box, hitting Ctl+Enter will run the code but not advance
+     - In each box
+       - Pressing Ctl+Enter will run the code but not advance
+       - Pressing Alt+Enter will run the code and make a new box underneath
      - I am commenting everything to hopefully be self explanatory
 
 ## Data:
@@ -40,6 +42,17 @@ Video link:
 
 ## Notes:
 
+Ways to import files:
+- Import csv file
+  - df = pd.read_csv("diabetes.csv")
+- Importing Excel files (single sheet)
+  - df = pd.read_excel('diabetes.xlsx')
+- Importing Excel files (multiple sheets)
+  - # Extracting the second sheet since Python uses 0-indexing
+  - df = pd.read_excel('diabetes_multi.xlsx', sheet_name=1)
+- Importing JSON file
+  - df = pd.read_json("diabetes.json")
+  
 | Utility                             | Functions                 |
 |-------------------------------------|---------------------------|
 | Extract Column Names                | df.columns                |
