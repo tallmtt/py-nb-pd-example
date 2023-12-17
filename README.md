@@ -72,7 +72,6 @@ Outputting a DataFrame:
 - into an Excel file
   - df.to_excel("diabetes_out.xlsx", index=False)
 
-
 | Utility                             | Functions                 |
 |-------------------------------------|---------------------------|
 | Extract Column Names                | df.columns                |
