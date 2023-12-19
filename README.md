@@ -56,8 +56,7 @@ Ways to import files:
   - df = pd.read_csv("diabetes.csv")
 - Importing Excel files (single sheet)
   - df = pd.read_excel('diabetes.xlsx')
-- Importing Excel files (multiple sheets)
-  - # Extracting the second sheet since Python uses 0-indexing
+- Importing Excel files (multiple sheets) (Extracting the second sheet  since Python uses 0-indexing)
   - df = pd.read_excel('diabetes_multi.xlsx', sheet_name=1)
 - Importing JSON file
   - df = pd.read_json("diabetes.json")
